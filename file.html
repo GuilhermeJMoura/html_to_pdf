@@ -1,0 +1,506 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  padding: 40px;
+  height: 100%;
+  background: #f5f5f5;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Grid de páginas */
+.page {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 30px;
+  margin: 0 auto;
+  max-width: 1140px;
+  padding: 40px 0;
+  page-break-inside: avoid;
+}
+
+@media print {
+  .page { page-break-after: always; }
+  body { background: #FFF; margin: 0; }
+}
+
+/* Card */
+.card {
+  background: #FFF;
+  border-radius: 17px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  break-inside: avoid;
+  page-break-inside: avoid;
+  min-height: 430px;
+  overflow: hidden;
+}
+
+.card-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.header-container {
+  display: flex;
+  align-items: flex-start;
+}
+
+.side-bar {
+  width: 4px;
+  background: #D11B20;
+  border-radius: 50px;
+  margin-right: 10px;
+}
+
+.header-text .company {
+  font-weight: 700;
+  font-size: 16px;
+  color: #D11B20;
+  text-transform: capitalize;
+}
+
+.header-text .title {
+  font-weight: 400;
+  font-size: 15px;
+  color: #000;
+  text-transform: capitalize;
+}
+
+.description {
+  font-size: 12px;
+  line-height: 16px;
+  color: #333;
+  text-transform: capitalize;
+  white-space: pre-wrap;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 10px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.info-label {
+  font-size: 11px;
+  color: #000;
+}
+
+.info-value {
+  font-size: 12px;
+  line-height: 16px;
+  color: #000;
+  word-break: break-word;
+}
+
+.location-value {
+  color: #D11B20;
+  font-weight: 700;
+}
+
+.classification-section {
+  margin-top: auto;
+}
+
+.info-class-label {
+  font-size: 10px;
+  color: #000;
+}
+
+.info-class-box {
+  display: inline-block;
+  padding: 4px 8px;
+  background: #FFEEEE;
+  border-radius: 4px;
+  font-size: 11px;
+  color: #000;
+}
+
+.footer-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  background: #D11B20;
+  border-radius: 0 0 17px 17px;
+}
+
+.info-invest-label {
+  font-size: 12px;
+  color: #FFF;
+}
+
+.info-invest-value {
+  font-size: 14px;
+  font-weight: 700;
+  color: #FFF;
+}
+
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="card">
+      <div class="card-content">
+        <div class="header-container">
+          <div class="side-bar"></div>
+          <div class="header-text">
+            <div class="company">gafisa sanhidrel engekit instalacoes e comercio ltda</div>
+            <div class="title">alpha mall</div>
+          </div>
+        </div>
+        <div class="description">obra obra finalizada localizada em rio de janeiro rio de janeiro fase execucao</div>
+        <div class="info-grid">
+          <div class="info-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAWJJREFUOI2lkz9Lw1AUxc99aVOo7VihplA7CEIRWrrY76D4ASwuIrjobnUSEed2LTg5O/UruBVbhy4O/ZcYVBwUVEzSXAdTSJoXEbzT5b5zzvu9C4+YGf+pmGzY0bSkKhI1l7kKAILoxnK/riqG8TGvpXmCXj5fpKloA8gHlRhMHXejbI76kQEdTUvGSe2HzL6QdzjF6mTyORsJ/7kqErWZWUmnkD2pI3t8BCWd+hEwCguIb0fuwGVeJ69fPDxAZn/PMzLM8wsPgqsAWlICAVhSdF8xBzUBAgZ6s/6p0QS8/Tw2mn5N1+8JLPE2u5JRFEcHoEYAWCrspVVdf5E+oWzePxNwGf0AavnNoQAAcMT0lAhvEverHXPP5oehgPJ4/ACX6yE7c70yHJohJulfIKK73PI1GFsAQKD2mjHYhEQcIvBuY5XtXQBjACOF7B2ZOZrAq26uUAKAkj7oRml+DfhLfQMMu4ju45A1hgAAAABJRU5ErkJggg==" class="icon" alt="Local">
+            <div class="info-value location-value">rio de janeiro rio de janeiro</div>
+          </div>
+          <div class="info-item">
+            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNNCA0aDE2djRINHogTTQgMTBoMTZ2NEg0eiBNNCAxNmgxNnY0SDR6IiBmaWxsPSIjQjBCMEIwIi8+PC9zdmc+" class="icon" alt="Setor">
+            <div class="info-label">Setor</div>
+            <div class="info-value">edificacoes</div>
+          </div>
+          <div class="info-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAjtJREFUOI2Vk8FrE0EYxX/f7uzkWGkq2oKXSjy3IFLUQ0uPPWxCu+BVxPwBvRgRW+sp/gsB6UnQbqWb5NBb20sp0kNyb3rwZtRWvKW7Oxkv2RpCPPhgYHjv+95jvpkRay3jsL+/n+v1erMAaZqeB0EQj6uTUYN6vf4QqACLgDOgDXDU7/erpVLpZKxBGIau1roKBMCWUqqTpuk2gFLqaZIk90RkA/jUbrcrm5ubfYYSyOVy74AHSql53/e3kyRZBnaB3SRJlovF4vs4jueBhbm5uWrW5wA0Go1H1to1pVRxZWXlF4CI3AeOgePBniAILuM4LgJPms3mwrWBtfYFsJU1D1BwXffMdd0zoJCRQRBcAm+NMRUAJwxDDSxqrT+PDPhmmqbfRKQLTA0LcRyHIrJUq9U85brutIj0rq6u1qMo+jtdkQlgPUkSEZGJKIreZJrneQDxzMzMdHYE4f8hxhgrOzs7Wmv9M47jO0EQ/M7Uer1+aa2d9TxP0jTt+L6fz7Qoim6IyNdutzvlDF7Yoed5ayMJ35VSt621t4Afw4LjOAFwUC6XEweg3+9XRWQjDMPJobqOMaZgjCkAnYwMw3DSWvsaqMLgGkul0omIfNRaR5mJiJyKyOPBOgXY29vL53K5OvDB9/0v1wYArVbrpYicaK1bURQ9Aw6ttavW2lUROWo0Gs8dx2lZa4/b7far60mOfqZms7lgjKmIyBLgDmgDHADVLPmfBhlqtZqXz+fvAlxcXJyXy+VkXN0fdsT4dW27bUgAAAAASUVORK5CYII=" class="icon" alt="Plataforma">
+            <div class="info-label">Plataforma</div>
+            <div class="info-value">obrasonline</div>
+          </div>
+          <div class="info-item">
+            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTIgMTcuMjdMMTguMTggMjFsLTEuNjQtNy4wM0wyMiA5LjI0bC03LjE5LS42MUwxMiAyIDkuMTkgOC42MyAyIDkuMjRsNS40NiA0LjczTDUuODIgMjF6IiBmaWxsPSIjQjBCMEIwIi8+PC9zdmc+" class="icon" alt="Nota">
+            <div class="info-label">Nota média</div>
+            <div class="info-value">5</div>
+          </div>
+        </div>
+        <div class="classification-section">
+          <div class="info-class-label">Classificação</div>
+          <div class="info-class-box">oportunidade</div>
+        </div>
+      </div>
+      <div class="footer-bar">
+        <div class="info-invest-label">Investimento:</div>
+        <div class="info-invest-value">R$ 0,00</div>
+      </div>
+    </div>
+  
+    <div class="card">
+      <div class="card-content">
+        <div class="header-container">
+          <div class="side-bar"></div>
+          <div class="header-text">
+            <div class="company">lactalis</div>
+            <div class="title">ampliacao e modernizacao da fabrica lactalis carambei</div>
+          </div>
+        </div>
+        <div class="description">obra obra nao iniciada localizada em carambei parana fase intencao de investimento</div>
+        <div class="info-grid">
+          <div class="info-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAWJJREFUOI2lkz9Lw1AUxc99aVOo7VihplA7CEIRWrrY76D4ASwuIrjobnUSEed2LTg5O/UruBVbhy4O/ZcYVBwUVEzSXAdTSJoXEbzT5b5zzvu9C4+YGf+pmGzY0bSkKhI1l7kKAILoxnK/riqG8TGvpXmCXj5fpKloA8gHlRhMHXejbI76kQEdTUvGSe2HzL6QdzjF6mTyORsJ/7kqErWZWUmnkD2pI3t8BCWd+hEwCguIb0fuwGVeJ69fPDxAZn/PMzLM8wsPgqsAWlICAVhSdF8xBzUBAgZ6s/6p0QS8/Tw2mn5N1+8JLPE2u5JRFEcHoEYAWCrspVVdf5E+oWzePxNwGf0AavnNoQAAcMT0lAhvEverHXPP5oehgPJ4/ACX6yE7c70yHJohJulfIKK73PI1GFsAQKD2mjHYhEQcIvBuY5XtXQBjACOF7B2ZOZrAq26uUAKAkj7oRml+DfhLfQMMu4ju45A1hgAAAABJRU5ErkJggg==" class="icon" alt="Local">
+            <div class="info-value location-value">carambei parana</div>
+          </div>
+          <div class="info-item">
+            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNNCA0aDE2djRINHogTTQgMTBoMTZ2NEg0eiBNNCAxNmgxNnY0SDR6IiBmaWxsPSIjQjBCMEIwIi8+PC9zdmc+" class="icon" alt="Setor">
+            <div class="info-label">Setor</div>
+            <div class="info-value">agronegocio</div>
+          </div>
+          <div class="info-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAjtJREFUOI2Vk8FrE0EYxX/f7uzkWGkq2oKXSjy3IFLUQ0uPPWxCu+BVxPwBvRgRW+sp/gsB6UnQbqWb5NBb20sp0kNyb3rwZtRWvKW7Oxkv2RpCPPhgYHjv+95jvpkRay3jsL+/n+v1erMAaZqeB0EQj6uTUYN6vf4QqACLgDOgDXDU7/erpVLpZKxBGIau1roKBMCWUqqTpuk2gFLqaZIk90RkA/jUbrcrm5ubfYYSyOVy74AHSql53/e3kyRZBnaB3SRJlovF4vs4jueBhbm5uWrW5wA0Go1H1to1pVRxZWXlF4CI3AeOgePBniAILuM4LgJPms3mwrWBtfYFsJU1D1BwXffMdd0zoJCRQRBcAm+NMRUAJwxDDSxqrT+PDPhmmqbfRKQLTA0LcRyHIrJUq9U85brutIj0rq6u1qMo+jtdkQlgPUkSEZGJKIreZJrneQDxzMzMdHYE4f8hxhgrOzs7Wmv9M47jO0EQ/M7Uer1+aa2d9TxP0jTt+L6fz7Qoim6IyNdutzvlDF7Yoed5ayMJ35VSt621t4Afw4LjOAFwUC6XEweg3+9XRWQjDMPJobqOMaZgjCkAnYwMw3DSWvsaqMLgGkul0omIfNRaR5mJiJyKyOPBOgXY29vL53K5OvDB9/0v1wYArVbrpYicaK1bURQ9Aw6ttavW2lUROWo0Gs8dx2lZa4/b7far60mOfqZms7lgjKmIyBLgDmgDHADVLPmfBhlqtZqXz+fvAlxcXJyXy+VkXN0fdsT4dW27bUgAAAAASUVORK5CYII=" class="icon" alt="Plataforma">
+            <div class="info-label">Plataforma</div>
+            <div class="info-value">obrasonline</div>
+          </div>
+          <div class="info-item">
+            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTIgMTcuMjdMMTguMTggMjFsLTEuNjQtNy4wM0wyMiA5LjI0bC03LjE5LS42MUwxMiAyIDkuMTkgOC42MyAyIDkuMjRsNS40NiA0LjczTDUuODIgMjF6IiBmaWxsPSIjQjBCMEIwIi8+PC9zdmc+" class="icon" alt="Nota">
+            <div class="info-label">Nota média</div>
+            <div class="info-value">5.8</div>
+          </div>
+        </div>
+        <div class="classification-section">
+          <div class="info-class-label">Classificação</div>
+          <div class="info-class-box">oportunidade</div>
+        </div>
+      </div>
+      <div class="footer-bar">
+        <div class="info-invest-label">Investimento:</div>
+        <div class="info-invest-value">R$ 0,00</div>
+      </div>
+    </div>
+  
+    <div class="card">
+      <div class="card-content">
+        <div class="header-container">
+          <div class="side-bar"></div>
+          <div class="header-text">
+            <div class="company">construtora in aco ltda</div>
+            <div class="title">gran picarras shopping</div>
+          </div>
+        </div>
+        <div class="description">obra obra nao iniciada localizada em balneario picarras santa catarina fase breve futuro lancamento</div>
+        <div class="info-grid">
+          <div class="info-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAWJJREFUOI2lkz9Lw1AUxc99aVOo7VihplA7CEIRWrrY76D4ASwuIrjobnUSEed2LTg5O/UruBVbhy4O/ZcYVBwUVEzSXAdTSJoXEbzT5b5zzvu9C4+YGf+pmGzY0bSkKhI1l7kKAILoxnK/riqG8TGvpXmCXj5fpKloA8gHlRhMHXejbI76kQEdTUvGSe2HzL6QdzjF6mTyORsJ/7kqErWZWUmnkD2pI3t8BCWd+hEwCguIb0fuwGVeJ69fPDxAZn/PMzLM8wsPgqsAWlICAVhSdF8xBzUBAgZ6s/6p0QS8/Tw2mn5N1+8JLPE2u5JRFEcHoEYAWCrspVVdf5E+oWzePxNwGf0AavnNoQAAcMT0lAhvEverHXPP5oehgPJ4/ACX6yE7c70yHJohJulfIKK73PI1GFsAQKD2mjHYhEQcIvBuY5XtXQBjACOF7B2ZOZrAq26uUAKAkj7oRml+DfhLfQMMu4ju45A1hgAAAABJRU5ErkJggg==" class="icon" alt="Local">
+            <div class="info-value location-value">balneario picarras santa catarina</div>
+          </div>
+          <div class="info-item">
+            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNNCA0aDE2djRINHogTTQgMTBoMTZ2NEg0eiBNNCAxNmgxNnY0SDR6IiBmaWxsPSIjQjBCMEIwIi8+PC9zdmc+" class="icon" alt="Setor">
+            <div class="info-label">Setor</div>
+            <div class="info-value">comercio</div>
+          </div>
+          <div class="info-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAjtJREFUOI2Vk8FrE0EYxX/f7uzkWGkq2oKXSjy3IFLUQ0uPPWxCu+BVxPwBvRgRW+sp/gsB6UnQbqWb5NBb20sp0kNyb3rwZtRWvKW7Oxkv2RpCPPhgYHjv+95jvpkRay3jsL+/n+v1erMAaZqeB0EQj6uTUYN6vf4QqACLgDOgDXDU7/erpVLpZKxBGIau1roKBMCWUqqTpuk2gFLqaZIk90RkA/jUbrcrm5ubfYYSyOVy74AHSql53/e3kyRZBnaB3SRJlovF4vs4jueBhbm5uWrW5wA0Go1H1to1pVRxZWXlF4CI3AeOgePBniAILuM4LgJPms3mwrWBtfYFsJU1D1BwXffMdd0zoJCRQRBcAm+NMRUAJwxDDSxqrT+PDPhmmqbfRKQLTA0LcRyHIrJUq9U85brutIj0rq6u1qMo+jtdkQlgPUkSEZGJKIreZJrneQDxzMzMdHYE4f8hxhgrOzs7Wmv9M47jO0EQ/M7Uer1+aa2d9TxP0jTt+L6fz7Qoim6IyNdutzvlDF7Yoed5ayMJ35VSt621t4Afw4LjOAFwUC6XEweg3+9XRWQjDMPJobqOMaZgjCkAnYwMw3DSWvsaqMLgGkul0omIfNRaR5mJiJyKyOPBOgXY29vL53K5OvDB9/0v1wYArVbrpYicaK1bURQ9Aw6ttavW2lUROWo0Gs8dx2lZa4/b7far60mOfqZms7lgjKmIyBLgDmgDHADVLPmfBhlqtZqXz+fvAlxcXJyXy+VkXN0fdsT4dW27bUgAAAAASUVORK5CYII=" class="icon" alt="Plataforma">
+            <div class="info-label">Plataforma</div>
+            <div class="info-value">obrasonline</div>
+          </div>
+          <div class="info-item">
+            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTIgMTcuMjdMMTguMTggMjFsLTEuNjQtNy4wM0wyMiA5LjI0bC03LjE5LS42MUwxMiAyIDkuMTkgOC42MyAyIDkuMjRsNS40NiA0LjczTDUuODIgMjF6IiBmaWxsPSIjQjBCMEIwIi8+PC9zdmc+" class="icon" alt="Nota">
+            <div class="info-label">Nota média</div>
+            <div class="info-value">6.6</div>
+          </div>
+        </div>
+        <div class="classification-section">
+          <div class="info-class-label">Classificação</div>
+          <div class="info-class-box">oportunidade</div>
+        </div>
+      </div>
+      <div class="footer-bar">
+        <div class="info-invest-label">Investimento:</div>
+        <div class="info-invest-value">R$ 200.000.000,00</div>
+      </div>
+    </div>
+  
+    <div class="card">
+      <div class="card-content">
+        <div class="header-container">
+          <div class="side-bar"></div>
+          <div class="header-text">
+            <div class="company">margen engenharia e construcoes</div>
+            <div class="title">iperoig eco resort</div>
+          </div>
+        </div>
+        <div class="description">obra obra nao iniciada localizada em ubatuba sao paulo fase projeto executivo</div>
+        <div class="info-grid">
+          <div class="info-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAWJJREFUOI2lkz9Lw1AUxc99aVOo7VihplA7CEIRWrrY76D4ASwuIrjobnUSEed2LTg5O/UruBVbhy4O/ZcYVBwUVEzSXAdTSJoXEbzT5b5zzvu9C4+YGf+pmGzY0bSkKhI1l7kKAILoxnK/riqG8TGvpXmCXj5fpKloA8gHlRhMHXejbI76kQEdTUvGSe2HzL6QdzjF6mTyORsJ/7kqErWZWUmnkD2pI3t8BCWd+hEwCguIb0fuwGVeJ69fPDxAZn/PMzLM8wsPgqsAWlICAVhSdF8xBzUBAgZ6s/6p0QS8/Tw2mn5N1+8JLPE2u5JRFEcHoEYAWCrspVVdf5E+oWzePxNwGf0AavnNoQAAcMT0lAhvEverHXPP5oehgPJ4/ACX6yE7c70yHJohJulfIKK73PI1GFsAQKD2mjHYhEQcIvBuY5XtXQBjACOF7B2ZOZrAq26uUAKAkj7oRml+DfhLfQMMu4ju45A1hgAAAABJRU5ErkJggg==" class="icon" alt="Local">
+            <div class="info-value location-value">ubatuba sao paulo</div>
+          </div>
+          <div class="info-item">
+            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNNCA0aDE2djRINHogTTQgMTBoMTZ2NEg0eiBNNCAxNmgxNnY0SDR6IiBmaWxsPSIjQjBCMEIwIi8+PC9zdmc+" class="icon" alt="Setor">
+            <div class="info-label">Setor</div>
+            <div class="info-value">turismo lazer entretenimento</div>
+          </div>
+          <div class="info-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAjtJREFUOI2Vk8FrE0EYxX/f7uzkWGkq2oKXSjy3IFLUQ0uPPWxCu+BVxPwBvRgRW+sp/gsB6UnQbqWb5NBb20sp0kNyb3rwZtRWvKW7Oxkv2RpCPPhgYHjv+95jvpkRay3jsL+/n+v1erMAaZqeB0EQj6uTUYN6vf4QqACLgDOgDXDU7/erpVLpZKxBGIau1roKBMCWUqqTpuk2gFLqaZIk90RkA/jUbrcrm5ubfYYSyOVy74AHSql53/e3kyRZBnaB3SRJlovF4vs4jueBhbm5uWrW5wA0Go1H1to1pVRxZWXlF4CI3AeOgePBniAILuM4LgJPms3mwrWBtfYFsJU1D1BwXffMdd0zoJCRQRBcAm+NMRUAJwxDDSxqrT+PDPhmmqbfRKQLTA0LcRyHIrJUq9U85brutIj0rq6u1qMo+jtdkQlgPUkSEZGJKIreZJrneQDxzMzMdHYE4f8hxhgrOzs7Wmv9M47jO0EQ/M7Uer1+aa2d9TxP0jTt+L6fz7Qoim6IyNdutzvlDF7Yoed5ayMJ35VSt621t4Afw4LjOAFwUC6XEweg3+9XRWQjDMPJobqOMaZgjCkAnYwMw3DSWvsaqMLgGkul0omIfNRaR5mJiJyKyOPBOgXY29vL53K5OvDB9/0v1wYArVbrpYicaK1bURQ9Aw6ttavW2lUROWo0Gs8dx2lZa4/b7far60mOfqZms7lgjKmIyBLgDmgDHADVLPmfBhlqtZqXz+fvAlxcXJyXy+VkXN0fdsT4dW27bUgAAAAASUVORK5CYII=" class="icon" alt="Plataforma">
+            <div class="info-label">Plataforma</div>
+            <div class="info-value">obrasonline</div>
+          </div>
+          <div class="info-item">
+            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTIgMTcuMjdMMTguMTggMjFsLTEuNjQtNy4wM0wyMiA5LjI0bC03LjE5LS42MUwxMiAyIDkuMTkgOC42MyAyIDkuMjRsNS40NiA0LjczTDUuODIgMjF6IiBmaWxsPSIjQjBCMEIwIi8+PC9zdmc+" class="icon" alt="Nota">
+            <div class="info-label">Nota média</div>
+            <div class="info-value">4.6</div>
+          </div>
+        </div>
+        <div class="classification-section">
+          <div class="info-class-label">Classificação</div>
+          <div class="info-class-box">oportunidade</div>
+        </div>
+      </div>
+      <div class="footer-bar">
+        <div class="info-invest-label">Investimento:</div>
+        <div class="info-invest-value">R$ 0,00</div>
+      </div>
+    </div>
+  
+    <div class="card">
+      <div class="card-content">
+        <div class="header-container">
+          <div class="side-bar"></div>
+          <div class="header-text">
+            <div class="company">smart empreendimentos</div>
+            <div class="title">loteamento comercial golden celia colares</div>
+          </div>
+        </div>
+        <div class="description">obra fora do perfil localizada em montes claros minas gerais fase breve futuro lancamento</div>
+        <div class="info-grid">
+          <div class="info-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAWJJREFUOI2lkz9Lw1AUxc99aVOo7VihplA7CEIRWrrY76D4ASwuIrjobnUSEed2LTg5O/UruBVbhy4O/ZcYVBwUVEzSXAdTSJoXEbzT5b5zzvu9C4+YGf+pmGzY0bSkKhI1l7kKAILoxnK/riqG8TGvpXmCXj5fpKloA8gHlRhMHXejbI76kQEdTUvGSe2HzL6QdzjF6mTyORsJ/7kqErWZWUmnkD2pI3t8BCWd+hEwCguIb0fuwGVeJ69fPDxAZn/PMzLM8wsPgqsAWlICAVhSdF8xBzUBAgZ6s/6p0QS8/Tw2mn5N1+8JLPE2u5JRFEcHoEYAWCrspVVdf5E+oWzePxNwGf0AavnNoQAAcMT0lAhvEverHXPP5oehgPJ4/ACX6yE7c70yHJohJulfIKK73PI1GFsAQKD2mjHYhEQcIvBuY5XtXQBjACOF7B2ZOZrAq26uUAKAkj7oRml+DfhLfQMMu4ju45A1hgAAAABJRU5ErkJggg==" class="icon" alt="Local">
+            <div class="info-value location-value">montes claros minas gerais</div>
+          </div>
+          <div class="info-item">
+            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNNCA0aDE2djRINHogTTQgMTBoMTZ2NEg0eiBNNCAxNmgxNnY0SDR6IiBmaWxsPSIjQjBCMEIwIi8+PC9zdmc+" class="icon" alt="Setor">
+            <div class="info-label">Setor</div>
+            <div class="info-value">edificacoes</div>
+          </div>
+          <div class="info-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAjtJREFUOI2Vk8FrE0EYxX/f7uzkWGkq2oKXSjy3IFLUQ0uPPWxCu+BVxPwBvRgRW+sp/gsB6UnQbqWb5NBb20sp0kNyb3rwZtRWvKW7Oxkv2RpCPPhgYHjv+95jvpkRay3jsL+/n+v1erMAaZqeB0EQj6uTUYN6vf4QqACLgDOgDXDU7/erpVLpZKxBGIau1roKBMCWUqqTpuk2gFLqaZIk90RkA/jUbrcrm5ubfYYSyOVy74AHSql53/e3kyRZBnaB3SRJlovF4vs4jueBhbm5uWrW5wA0Go1H1to1pVRxZWXlF4CI3AeOgePBniAILuM4LgJPms3mwrWBtfYFsJU1D1BwXffMdd0zoJCRQRBcAm+NMRUAJwxDDSxqrT+PDPhmmqbfRKQLTA0LcRyHIrJUq9U85brutIj0rq6u1qMo+jtdkQlgPUkSEZGJKIreZJrneQDxzMzMdHYE4f8hxhgrOzs7Wmv9M47jO0EQ/M7Uer1+aa2d9TxP0jTt+L6fz7Qoim6IyNdutzvlDF7Yoed5ayMJ35VSt621t4Afw4LjOAFwUC6XEweg3+9XRWQjDMPJobqOMaZgjCkAnYwMw3DSWvsaqMLgGkul0omIfNRaR5mJiJyKyOPBOgXY29vL53K5OvDB9/0v1wYArVbrpYicaK1bURQ9Aw6ttavW2lUROWo0Gs8dx2lZa4/b7far60mOfqZms7lgjKmIyBLgDmgDHADVLPmfBhlqtZqXz+fvAlxcXJyXy+VkXN0fdsT4dW27bUgAAAAASUVORK5CYII=" class="icon" alt="Plataforma">
+            <div class="info-label">Plataforma</div>
+            <div class="info-value">obrasonline</div>
+          </div>
+          <div class="info-item">
+            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTIgMTcuMjdMMTguMTggMjFsLTEuNjQtNy4wM0wyMiA5LjI0bC03LjE5LS42MUwxMiAyIDkuMTkgOC42MyAyIDkuMjRsNS40NiA0LjczTDUuODIgMjF6IiBmaWxsPSIjQjBCMEIwIi8+PC9zdmc+" class="icon" alt="Nota">
+            <div class="info-label">Nota média</div>
+            <div class="info-value">4.8</div>
+          </div>
+        </div>
+        <div class="classification-section">
+          <div class="info-class-label">Classificação</div>
+          <div class="info-class-box">oportunidade</div>
+        </div>
+      </div>
+      <div class="footer-bar">
+        <div class="info-invest-label">Investimento:</div>
+        <div class="info-invest-value">R$ 0,00</div>
+      </div>
+    </div>
+  
+    <div class="card">
+      <div class="card-content">
+        <div class="header-container">
+          <div class="side-bar"></div>
+          <div class="header-text">
+            <div class="company">cyrela brazil realty sa empreendimentos e participacoes</div>
+            <div class="title">medplex vera cruz consultorios</div>
+          </div>
+        </div>
+        <div class="description">obra obra finalizada localizada em campinas sao paulo fase execucao</div>
+        <div class="info-grid">
+          <div class="info-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAWJJREFUOI2lkz9Lw1AUxc99aVOo7VihplA7CEIRWrrY76D4ASwuIrjobnUSEed2LTg5O/UruBVbhy4O/ZcYVBwUVEzSXAdTSJoXEbzT5b5zzvu9C4+YGf+pmGzY0bSkKhI1l7kKAILoxnK/riqG8TGvpXmCXj5fpKloA8gHlRhMHXejbI76kQEdTUvGSe2HzL6QdzjF6mTyORsJ/7kqErWZWUmnkD2pI3t8BCWd+hEwCguIb0fuwGVeJ69fPDxAZn/PMzLM8wsPgqsAWlICAVhSdF8xBzUBAgZ6s/6p0QS8/Tw2mn5N1+8JLPE2u5JRFEcHoEYAWCrspVVdf5E+oWzePxNwGf0AavnNoQAAcMT0lAhvEverHXPP5oehgPJ4/ACX6yE7c70yHJohJulfIKK73PI1GFsAQKD2mjHYhEQcIvBuY5XtXQBjACOF7B2ZOZrAq26uUAKAkj7oRml+DfhLfQMMu4ju45A1hgAAAABJRU5ErkJggg==" class="icon" alt="Local">
+            <div class="info-value location-value">campinas sao paulo</div>
+          </div>
+          <div class="info-item">
+            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNNCA0aDE2djRINHogTTQgMTBoMTZ2NEg0eiBNNCAxNmgxNnY0SDR6IiBmaWxsPSIjQjBCMEIwIi8+PC9zdmc+" class="icon" alt="Setor">
+            <div class="info-label">Setor</div>
+            <div class="info-value">saude e servicos sociais</div>
+          </div>
+          <div class="info-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAjtJREFUOI2Vk8FrE0EYxX/f7uzkWGkq2oKXSjy3IFLUQ0uPPWxCu+BVxPwBvRgRW+sp/gsB6UnQbqWb5NBb20sp0kNyb3rwZtRWvKW7Oxkv2RpCPPhgYHjv+95jvpkRay3jsL+/n+v1erMAaZqeB0EQj6uTUYN6vf4QqACLgDOgDXDU7/erpVLpZKxBGIau1roKBMCWUqqTpuk2gFLqaZIk90RkA/jUbrcrm5ubfYYSyOVy74AHSql53/e3kyRZBnaB3SRJlovF4vs4jueBhbm5uWrW5wA0Go1H1to1pVRxZWXlF4CI3AeOgePBniAILuM4LgJPms3mwrWBtfYFsJU1D1BwXffMdd0zoJCRQRBcAm+NMRUAJwxDDSxqrT+PDPhmmqbfRKQLTA0LcRyHIrJUq9U85brutIj0rq6u1qMo+jtdkQlgPUkSEZGJKIreZJrneQDxzMzMdHYE4f8hxhgrOzs7Wmv9M47jO0EQ/M7Uer1+aa2d9TxP0jTt+L6fz7Qoim6IyNdutzvlDF7Yoed5ayMJ35VSt621t4Afw4LjOAFwUC6XEweg3+9XRWQjDMPJobqOMaZgjCkAnYwMw3DSWvsaqMLgGkul0omIfNRaR5mJiJyKyOPBOgXY29vL53K5OvDB9/0v1wYArVbrpYicaK1bURQ9Aw6ttavW2lUROWo0Gs8dx2lZa4/b7far60mOfqZms7lgjKmIyBLgDmgDHADVLPmfBhlqtZqXz+fvAlxcXJyXy+VkXN0fdsT4dW27bUgAAAAASUVORK5CYII=" class="icon" alt="Plataforma">
+            <div class="info-label">Plataforma</div>
+            <div class="info-value">obrasonline</div>
+          </div>
+          <div class="info-item">
+            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTIgMTcuMjdMMTguMTggMjFsLTEuNjQtNy4wM0wyMiA5LjI0bC03LjE5LS42MUwxMiAyIDkuMTkgOC42MyAyIDkuMjRsNS40NiA0LjczTDUuODIgMjF6IiBmaWxsPSIjQjBCMEIwIi8+PC9zdmc+" class="icon" alt="Nota">
+            <div class="info-label">Nota média</div>
+            <div class="info-value">6.6</div>
+          </div>
+        </div>
+        <div class="classification-section">
+          <div class="info-class-label">Classificação</div>
+          <div class="info-class-box">oportunidade</div>
+        </div>
+      </div>
+      <div class="footer-bar">
+        <div class="info-invest-label">Investimento:</div>
+        <div class="info-invest-value">R$ 0,00</div>
+      </div>
+    </div>
+  </div><div class="page">
+    <div class="card">
+      <div class="card-content">
+        <div class="header-container">
+          <div class="side-bar"></div>
+          <div class="header-text">
+            <div class="company">lactalis</div>
+            <div class="title">modernizacao da fabrica lactalis londrina</div>
+          </div>
+        </div>
+        <div class="description">obra obra nao iniciada localizada em londrina parana fase intencao de investimento</div>
+        <div class="info-grid">
+          <div class="info-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAWJJREFUOI2lkz9Lw1AUxc99aVOo7VihplA7CEIRWrrY76D4ASwuIrjobnUSEed2LTg5O/UruBVbhy4O/ZcYVBwUVEzSXAdTSJoXEbzT5b5zzvu9C4+YGf+pmGzY0bSkKhI1l7kKAILoxnK/riqG8TGvpXmCXj5fpKloA8gHlRhMHXejbI76kQEdTUvGSe2HzL6QdzjF6mTyORsJ/7kqErWZWUmnkD2pI3t8BCWd+hEwCguIb0fuwGVeJ69fPDxAZn/PMzLM8wsPgqsAWlICAVhSdF8xBzUBAgZ6s/6p0QS8/Tw2mn5N1+8JLPE2u5JRFEcHoEYAWCrspVVdf5E+oWzePxNwGf0AavnNoQAAcMT0lAhvEverHXPP5oehgPJ4/ACX6yE7c70yHJohJulfIKK73PI1GFsAQKD2mjHYhEQcIvBuY5XtXQBjACOF7B2ZOZrAq26uUAKAkj7oRml+DfhLfQMMu4ju45A1hgAAAABJRU5ErkJggg==" class="icon" alt="Local">
+            <div class="info-value location-value">londrina parana</div>
+          </div>
+          <div class="info-item">
+            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNNCA0aDE2djRINHogTTQgMTBoMTZ2NEg0eiBNNCAxNmgxNnY0SDR6IiBmaWxsPSIjQjBCMEIwIi8+PC9zdmc+" class="icon" alt="Setor">
+            <div class="info-label">Setor</div>
+            <div class="info-value">agronegocio</div>
+          </div>
+          <div class="info-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAjtJREFUOI2Vk8FrE0EYxX/f7uzkWGkq2oKXSjy3IFLUQ0uPPWxCu+BVxPwBvRgRW+sp/gsB6UnQbqWb5NBb20sp0kNyb3rwZtRWvKW7Oxkv2RpCPPhgYHjv+95jvpkRay3jsL+/n+v1erMAaZqeB0EQj6uTUYN6vf4QqACLgDOgDXDU7/erpVLpZKxBGIau1roKBMCWUqqTpuk2gFLqaZIk90RkA/jUbrcrm5ubfYYSyOVy74AHSql53/e3kyRZBnaB3SRJlovF4vs4jueBhbm5uWrW5wA0Go1H1to1pVRxZWXlF4CI3AeOgePBniAILuM4LgJPms3mwrWBtfYFsJU1D1BwXffMdd0zoJCRQRBcAm+NMRUAJwxDDSxqrT+PDPhmmqbfRKQLTA0LcRyHIrJUq9U85brutIj0rq6u1qMo+jtdkQlgPUkSEZGJKIreZJrneQDxzMzMdHYE4f8hxhgrOzs7Wmv9M47jO0EQ/M7Uer1+aa2d9TxP0jTt+L6fz7Qoim6IyNdutzvlDF7Yoed5ayMJ35VSt621t4Afw4LjOAFwUC6XEweg3+9XRWQjDMPJobqOMaZgjCkAnYwMw3DSWvsaqMLgGkul0omIfNRaR5mJiJyKyOPBOgXY29vL53K5OvDB9/0v1wYArVbrpYicaK1bURQ9Aw6ttavW2lUROWo0Gs8dx2lZa4/b7far60mOfqZms7lgjKmIyBLgDmgDHADVLPmfBhlqtZqXz+fvAlxcXJyXy+VkXN0fdsT4dW27bUgAAAAASUVORK5CYII=" class="icon" alt="Plataforma">
+            <div class="info-label">Plataforma</div>
+            <div class="info-value">obrasonline</div>
+          </div>
+          <div class="info-item">
+            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTIgMTcuMjdMMTguMTggMjFsLTEuNjQtNy4wM0wyMiA5LjI0bC03LjE5LS42MUwxMiAyIDkuMTkgOC42MyAyIDkuMjRsNS40NiA0LjczTDUuODIgMjF6IiBmaWxsPSIjQjBCMEIwIi8+PC9zdmc+" class="icon" alt="Nota">
+            <div class="info-label">Nota média</div>
+            <div class="info-value">5.6</div>
+          </div>
+        </div>
+        <div class="classification-section">
+          <div class="info-class-label">Classificação</div>
+          <div class="info-class-box">oportunidade</div>
+        </div>
+      </div>
+      <div class="footer-bar">
+        <div class="info-invest-label">Investimento:</div>
+        <div class="info-invest-value">R$ 0,00</div>
+      </div>
+    </div>
+  
+    <div class="card">
+      <div class="card-content">
+        <div class="header-container">
+          <div class="side-bar"></div>
+          <div class="header-text">
+            <div class="company">adoro alimentos</div>
+            <div class="title">reforma da fabrica adoro alimentos</div>
+          </div>
+        </div>
+        <div class="description">obra obra finalizada localizada em varzea paulista sao paulo fase execucao</div>
+        <div class="info-grid">
+          <div class="info-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAWJJREFUOI2lkz9Lw1AUxc99aVOo7VihplA7CEIRWrrY76D4ASwuIrjobnUSEed2LTg5O/UruBVbhy4O/ZcYVBwUVEzSXAdTSJoXEbzT5b5zzvu9C4+YGf+pmGzY0bSkKhI1l7kKAILoxnK/riqG8TGvpXmCXj5fpKloA8gHlRhMHXejbI76kQEdTUvGSe2HzL6QdzjF6mTyORsJ/7kqErWZWUmnkD2pI3t8BCWd+hEwCguIb0fuwGVeJ69fPDxAZn/PMzLM8wsPgqsAWlICAVhSdF8xBzUBAgZ6s/6p0QS8/Tw2mn5N1+8JLPE2u5JRFEcHoEYAWCrspVVdf5E+oWzePxNwGf0AavnNoQAAcMT0lAhvEverHXPP5oehgPJ4/ACX6yE7c70yHJohJulfIKK73PI1GFsAQKD2mjHYhEQcIvBuY5XtXQBjACOF7B2ZOZrAq26uUAKAkj7oRml+DfhLfQMMu4ju45A1hgAAAABJRU5ErkJggg==" class="icon" alt="Local">
+            <div class="info-value location-value">varzea paulista sao paulo</div>
+          </div>
+          <div class="info-item">
+            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNNCA0aDE2djRINHogTTQgMTBoMTZ2NEg0eiBNNCAxNmgxNnY0SDR6IiBmaWxsPSIjQjBCMEIwIi8+PC9zdmc+" class="icon" alt="Setor">
+            <div class="info-label">Setor</div>
+            <div class="info-value">alimentos bebidas</div>
+          </div>
+          <div class="info-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAjtJREFUOI2Vk8FrE0EYxX/f7uzkWGkq2oKXSjy3IFLUQ0uPPWxCu+BVxPwBvRgRW+sp/gsB6UnQbqWb5NBb20sp0kNyb3rwZtRWvKW7Oxkv2RpCPPhgYHjv+95jvpkRay3jsL+/n+v1erMAaZqeB0EQj6uTUYN6vf4QqACLgDOgDXDU7/erpVLpZKxBGIau1roKBMCWUqqTpuk2gFLqaZIk90RkA/jUbrcrm5ubfYYSyOVy74AHSql53/e3kyRZBnaB3SRJlovF4vs4jueBhbm5uWrW5wA0Go1H1to1pVRxZWXlF4CI3AeOgePBniAILuM4LgJPms3mwrWBtfYFsJU1D1BwXffMdd0zoJCRQRBcAm+NMRUAJwxDDSxqrT+PDPhmmqbfRKQLTA0LcRyHIrJUq9U85brutIj0rq6u1qMo+jtdkQlgPUkSEZGJKIreZJrneQDxzMzMdHYE4f8hxhgrOzs7Wmv9M47jO0EQ/M7Uer1+aa2d9TxP0jTt+L6fz7Qoim6IyNdutzvlDF7Yoed5ayMJ35VSt621t4Afw4LjOAFwUC6XEweg3+9XRWQjDMPJobqOMaZgjCkAnYwMw3DSWvsaqMLgGkul0omIfNRaR5mJiJyKyOPBOgXY29vL53K5OvDB9/0v1wYArVbrpYicaK1bURQ9Aw6ttavW2lUROWo0Gs8dx2lZa4/b7far60mOfqZms7lgjKmIyBLgDmgDHADVLPmfBhlqtZqXz+fvAlxcXJyXy+VkXN0fdsT4dW27bUgAAAAASUVORK5CYII=" class="icon" alt="Plataforma">
+            <div class="info-label">Plataforma</div>
+            <div class="info-value">obrasonline</div>
+          </div>
+          <div class="info-item">
+            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTIgMTcuMjdMMTguMTggMjFsLTEuNjQtNy4wM0wyMiA5LjI0bC03LjE5LS42MUwxMiAyIDkuMTkgOC42MyAyIDkuMjRsNS40NiA0LjczTDUuODIgMjF6IiBmaWxsPSIjQjBCMEIwIi8+PC9zdmc+" class="icon" alt="Nota">
+            <div class="info-label">Nota média</div>
+            <div class="info-value">5.8</div>
+          </div>
+        </div>
+        <div class="classification-section">
+          <div class="info-class-label">Classificação</div>
+          <div class="info-class-box">oportunidade</div>
+        </div>
+      </div>
+      <div class="footer-bar">
+        <div class="info-invest-label">Investimento:</div>
+        <div class="info-invest-value">R$ 0,00</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
