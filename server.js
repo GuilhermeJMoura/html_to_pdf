@@ -22,7 +22,7 @@ app.post('/convert', upload.single('file'), async (req, res) => {
     await page.setViewport({ width: 1920, height: 1080, deviceScaleFactor: 1 });
     await page.emulateMediaType('screen');
 
-    await page.setContent(htmlContent, { waitUntil: 'networkidle0' });
+    await page.setContent(htmlContent, { timeout: 70000, waitUntil: 'networkidle0' });
     await page.screenshot({ path: 'preview.png', fullPage: true });
 
     // ✅ Gera PDF com o layout igual à tela renderizada
